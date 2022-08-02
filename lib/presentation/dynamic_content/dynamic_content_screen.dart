@@ -24,7 +24,7 @@ class DynamicContentScreen extends ConsumerWidget {
           error: (error) => Scaffold(
               appBar: AppBar(title: Text(ref.watch(dynamicContentIdProvider))),
               body: Center(child: RetryButton(dynamicContentProvider))),
-          data: (dynamicContent) => PageTabsScreen(
+          data: (dynamicContent) => _PageTabsScreen(
             currentPageId: pageId ?? dynamicContent.value.pages.first.id,
             dynamicContent: dynamicContent.value,
           ),
@@ -32,11 +32,10 @@ class DynamicContentScreen extends ConsumerWidget {
   }
 }
 
-class PageTabsScreen extends StatefulWidget {
-  PageTabsScreen({
+class _PageTabsScreen extends StatefulWidget {
+  _PageTabsScreen({
     required String currentPageId,
     required this.dynamicContent,
-    super.key,
   }) : index = dynamicContent.pages.indexWhere(
           (page) => page.id == currentPageId,
         );
@@ -45,10 +44,10 @@ class PageTabsScreen extends StatefulWidget {
   final int index;
 
   @override
-  PageTabsScreenState createState() => PageTabsScreenState();
+  _PageTabsScreenState createState() => _PageTabsScreenState();
 }
 
-class PageTabsScreenState extends State<PageTabsScreen>
+class _PageTabsScreenState extends State<_PageTabsScreen>
     with TickerProviderStateMixin {
   late final TabController _controller;
 
@@ -69,7 +68,7 @@ class PageTabsScreenState extends State<PageTabsScreen>
   }
 
   @override
-  void didUpdateWidget(PageTabsScreen oldWidget) {
+  void didUpdateWidget(_PageTabsScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
     _controller.index = widget.index;
   }

@@ -14,7 +14,8 @@ class DynamicContentRepository extends IDynamicContentRepository {
   @override
   Future<DynamicContent> getDynamicContent(String id) async {
     final urlEncodedId = Uri.encodeComponent(id);
-    final response = await _dioClient.get('/navigating-dynamic-content/$urlEncodedId');
+    final response =
+        await _dioClient.get('/navigating-dynamic-content/$urlEncodedId');
     final dynamicContentDto = DynamicContentDto.fromJson({
       ...response.data,
       'id': id,

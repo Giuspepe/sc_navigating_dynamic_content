@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:sc_navigating_dynamic_content/application/dynamic_content/item_provider.dart';
 import 'package:sc_navigating_dynamic_content/presentation/app/widgets/retry_button.dart';
 import 'package:sc_navigating_dynamic_content/presentation/dynamic_content/widgets/image_container.dart';

@@ -11,7 +11,7 @@ class DynamicContentDto with _$DynamicContentDto {
   const factory DynamicContentDto({
     required String id,
     required List<PageDto> pages,
-     required List<ItemDto> items,
+    required List<ItemDto> items,
   }) = _DynamicContentDto;
 
   const DynamicContentDto._();

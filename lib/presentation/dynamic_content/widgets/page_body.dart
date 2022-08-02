@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart' hide Page;
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sc_navigating_dynamic_content/domain/dynamic_content/page.dart';
 import 'package:sc_navigating_dynamic_content/presentation/dynamic_content/widgets/item_body.dart';
 import 'package:sc_navigating_dynamic_content/presentation/dynamic_content/widgets/item_chips_scroll_view.dart';
