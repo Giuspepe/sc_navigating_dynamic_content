@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sc_navigating_dynamic_content/init_dependency_injection.dart';
 
 void main() {
+  initDependencyInjection();
   runApp(const MyApp());
 }
 
